@@ -18,6 +18,7 @@ public class MyHandlerConfig implements WebMvcConfigurer {
     public void addInterceptors(InterceptorRegistry registry) {
         InterceptorRegistration interceptorRegistration = registry.addInterceptor(new MyHandler());
         interceptorRegistration.addPathPatterns("/handler/*");
+
         interceptorRegistration.excludePathPatterns("/aops/*");
     }
 }
